@@ -1,0 +1,13 @@
+[Unit]
+Description=poe-fan-hat-d service
+After=network.target
+
+[Service]
+Restart=always
+RestartSec=5
+Type=simple
+ExecStart=/usr/bin/python3 -u /home/pi/poe-fan-hat-d/lgpio/python/main.py
+User=pi
+
+[Install]
+WantedBy=multi-user.target
