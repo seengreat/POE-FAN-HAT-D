@@ -28,7 +28,7 @@ Figure 2-1: Resource Overview Diagram of POE FAN HAT D<br>
 ⑦ Speed-adjustable fan driver pin selection header<br>
 ## 2.2、Instructions
 The product installation wiring diagram is shown in Figure 2-2. The PoE switch/router needs to support the IEEE 802.3af/at network standard. Then, correctly insert the product into the Raspberry Pi 3B+/4B and connect it with an 8-pin Ethernet cable. <br>                    
-![image](https://github.com/seengreat/POE-FAN-HAT-D/blob/main/08.jpg)<br>
+![image](https://github.com/seengreat/POE-FAN-HAT-D/blob/main/09.jpg)<br>
 Figure 2-2: Product Wiring Diagram<br>
 ## 2.3、Python Libraries Installation
 The example program uses the Python 3 environment. To run the Python example program, you need to install smbus:<br>
@@ -61,15 +61,15 @@ For Python2.x <br>
 For Python3.x <br>
 ```sudo python3 setup.py install```<br>
 If the following error occurs:<br>
-``Error: Building this module requires either that swig is installed<br>
-(e.g.,'sudo apt install swig')or that wiringpi wrap.c from the<br>
-source distribution(on pypi) is available.``<br>
+``Error: Building this module requires either that swig is installed``<br>
+``(e.g.,'sudo apt install swig')or that wiringpi wrap.c from the``<br>
+``source distribution(on pypi) is available.``<br>
 At this point, enter the command `sudo apt install swig` to install SWIG. After completion, then execute `sudo python3 setup.py install` to compile and install. If similar information appears as shown below, it indicates a successful installation.<br>
-``ges<br>
-Adding wiringpi 2.60.0 to easy-install.pth file<br>
-Installed /usr/local/lib/python3.7/dist-packages/wiringpi-2.60.0-py3.7-linux-armv7<br>
-Processing dependencies for wiringpi==2.60.0<br>
-Finished processing dependencies for wiringpi==2.60.0``<br>
+``ges``<br>
+``Adding wiringpi 2.60.0 to easy-install.pth file``<br>
+``Installed /usr/local/lib/python3.7/dist-packages/wiringpi-2.60.0-py3.7-linux-armv7``<br>
+``Processing dependencies for wiringpi==2.60.0``<br>
+``Finished processing dependencies for wiringpi==2.60.0``<br>
 
 ## 2.5、lgpio library installation
 The C language version of the example program uses the lgpio library.<br>
