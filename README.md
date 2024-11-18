@@ -46,7 +46,7 @@ If version 2.52 appears, it indicates that the installation was successful. <br>
 ```cd WiringPi```<br>
 ```. /build``` <br>
 ```gpio -v ```#<br>
-# Running gpio -v will display version 2.70. If not, it means the installation failed.<br>
+Running gpio -v will display version 2.70. If not, it means the installation failed.<br>
 If the error "ImportError: No module named 'wiringpi'" appears when running the Python version of the sample program, execute the following command:<br>
 For Python2.x <br>
 ```pip install wiringpi```<br>
@@ -61,15 +61,15 @@ For Python2.x <br>
 For Python3.x <br>
 ```sudo python3 setup.py install```<br>
 If the following error occurs:<br>
-Error: Building this module requires either that swig is installed<br>
+``Error: Building this module requires either that swig is installed<br>
 (e.g.,'sudo apt install swig')or that wiringpi wrap.c from the<br>
-source distribution(on pypi) is available.<br>
+source distribution(on pypi) is available.``<br>
 At this point, enter the command `sudo apt install swig` to install SWIG. After completion, then execute `sudo python3 setup.py install` to compile and install. If similar information appears as shown below, it indicates a successful installation.<br>
-ges<br>
+``ges<br>
 Adding wiringpi 2.60.0 to easy-install.pth file<br>
 Installed /usr/local/lib/python3.7/dist-packages/wiringpi-2.60.0-py3.7-linux-armv7<br>
 Processing dependencies for wiringpi==2.60.0<br>
-Finished processing dependencies for wiringpi==2.60.0<br>
+Finished processing dependencies for wiringpi==2.60.0``<br>
 
 ## 2.5、lgpio library installation
 The C language version of the example program uses the lgpio library.<br>
@@ -98,9 +98,9 @@ Navigate to the poe-fan-hat-d/wiringpi/python/ or poe-fan-hat-d/lgpio/python/ fo
 After running the program, the OLED screen on the board will display the Raspberry Pi's IP address (for example, 192.168.1.22 as shown in the image) and the real-time CPU temperature (for example, 37.9℃ as shown in the image)<br>
 4）Run the C program:<br>
 Navigate to the poe-fan-hat-d/wiringpi/c/ or poe-fan-hat-d/lgpio/c/ folder and execute the following command:<br>
-```sudo make clean```
-```sudo make```
-```sudo ./main```
+```sudo make clean```<br>
+```sudo make```<br>
+```sudo ./main```<br>
 5）Temperature Control Test<br>
 Open a new terminal window and then install stress using the following command:<br>
 ```sudo apt install stress```<br>
@@ -126,9 +126,9 @@ Create a .service file on the Raspberry Pi, such as poe-fan-hat-d.service, with 
 Save and exit, then copy the file to the /etc/systemd/system directory:<br>
 ```sudo cp poe-fan-hat-d.service /etc/systemd/system/  ```<br>                         
 Reload all services:<br>
-```sudo systemctl daemon-reload ```        <br>                                   
+```sudo systemctl daemon-reload ```<br>                                   
 Enable the task to run automatically on startup:<br>
-```sudo systemctl enable poe-fan-hat-d.service```     <br>                            
+```sudo systemctl enable poe-fan-hat-d.service```<br>                            
 Start the task immediately:<br>
 ```sudo systemctl start poe-fan-hat-d.service``` <br>                                   
 Check the task's running status; under normal circumstances, the OLED display will show the IP address and CPU temperature in real time.<br>
