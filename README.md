@@ -28,7 +28,7 @@ Figure 2-1: Resource Overview Diagram of POE FAN HAT D<br>
 ⑦ Speed-adjustable fan driver pin selection header<br>
 ## 2.2、Instructions
 The product installation wiring diagram is shown in Figure 2-2. The PoE switch/router needs to support the IEEE 802.3af/at network standard. Then, correctly insert the product into the Raspberry Pi 3B+/4B and connect it with an 8-pin Ethernet cable. <br>                    
-![image](https://github.com/seengreat/POE-FAN-HAT-D/blob/main/09.jpg)<br>
+![image](https://github.com/seengreat/POE-FAN-HAT-D/blob/main/09.png)<br>
 Figure 2-2: Product Wiring Diagram<br>
 ## 2.3、Python Libraries Installation
 The example program uses the Python 3 environment. To run the Python example program, you need to install smbus:<br>
