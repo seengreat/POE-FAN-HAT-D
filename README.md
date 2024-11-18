@@ -14,6 +14,7 @@ The POE FAN HAT D is a PoE power supply and cooling solution designed for the Ra
 |Weight	|40g(excluding accessories)|
 
 # Raspberry Pi Example Usage
+The example code is divided into two versions: one using the WiringPi library and the other using the LGPIO library. The Bullseye system uses the WiringPi library, while the Bookworm system uses the LGPIO library.<br>
 ## 2.1、Resource Overview Diagram
 Resource overview is as shown in the following diagram:<br>
 ![image](https://github.com/seengreat/POE-FAN-HAT-D/blob/main/08.jpg)<br>
@@ -60,9 +61,15 @@ For Python2.x <br>
 For Python3.x <br>
 ```sudo python3 setup.py install```<br>
 If the following error occurs:<br>
-
+Error: Building this module requires either that swig is installed<br>
+(e.g.,'sudo apt install swig')or that wiringpi wrap.c from the<br>
+source distribution(on pypi) is available.<br>
 At this point, enter the command `sudo apt install swig` to install SWIG. After completion, then execute `sudo python3 setup.py install` to compile and install. If similar information appears as shown below, it indicates a successful installation.<br>
-
+ges<br>
+Adding wiringpi 2.60.0 to easy-install.pth file<br>
+Installed /usr/local/lib/python3.7/dist-packages/wiringpi-2.60.0-py3.7-linux-armv7<br>
+Processing dependencies for wiringpi==2.60.0<br>
+Finished processing dependencies for wiringpi==2.60.0<br>
 
 ## 2.5、lgpio library installation
 The C language version of the example program uses the lgpio library.<br>
