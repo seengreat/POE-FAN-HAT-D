@@ -10,7 +10,7 @@ class OLED_087:
     def __init__(self):
         self.i2c = smbus.SMBus(1)
         self.dev_addr = 0x3c
-        self.gram = np.zeros((144,4),dtype=np.int8)
+        self.gram = np.zeros((144,4),dtype=np.uint8)
         #self.gram = self.gram.dtype(int)
         
     def write_byte(self,reg,value):
